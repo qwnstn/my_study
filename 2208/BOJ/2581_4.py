@@ -1,3 +1,4 @@
+# 30840kb , 160ms
 def ppp(n):
     p_list = [2]                     # 소수들, 2, 3, 5,.. 
     x = 1
@@ -16,14 +17,14 @@ m = int(input())
 n = int(input())
 
 result = 0
-for i in ppp(n)[-1::-1]:
+for i in ppp(n)[-1::-1]:                # 뒤에서부터 추출
     if i < m:
         break
     else:
         result = result + i
         min = i
         
-if result == 0:
+if result == 0 or (n == m == 1):
     print(-1)
 else:
     print(result)
