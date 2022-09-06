@@ -36,7 +36,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
 }</component>
-  <component name="RunManager" selected="Python.note">
+  <component name="RunManager" selected="Python.BOJ_2108_통계학">
     <configuration name="BOJ_11758_CCW" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="2209" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -165,8 +165,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.note" />
         <item itemvalue="Python.BOJ_2108_통계학" />
+        <item itemvalue="Python.note" />
         <item itemvalue="Python.BOJ_25305_커트라인" />
         <item itemvalue="Python.BOJ_11758_CCW" />
         <item itemvalue="Python.BOJ_1358_하키" />

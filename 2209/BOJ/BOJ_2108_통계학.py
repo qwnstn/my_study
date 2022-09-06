@@ -1,4 +1,5 @@
 import sys
+import heapq
 
 input = sys.stdin.readline
 
@@ -12,6 +13,12 @@ ck_p = 0                                # 개수 세기
 number_m = [0 for i in range(4001)]
 maximum_m = [0, 0, 0, 0]
 ck_m = 0
+
+
+small = []
+big = []
+
+
 '''
 산술평균 : N개의 수들의 합을 N으로 나눈 값
 중앙값 : N개의 수들을 증가하는 순서로 나열했을 경우 그 중앙에 위치하는 값
@@ -20,6 +27,8 @@ ck_m = 0
 '''
 for t in range(n):
     a = int(input())
+    heapq.heappush(small, a)
+    heapq.heappush(big, -a)
     result[0] += a
     if a >= 0:
         number_p[a] += 1
@@ -68,13 +77,13 @@ if ck_m >= n//2 + 1:
     while ck_m >= n//2 + 1:
         index += 1
         ck_m -= number_m[index]
-    result[1] = number_m[index]
+    result[1] = -index
 else:
-    index = 0
+    index = -1
     while ck_m < n // 2 + 1:
         index += 1
         ck_m += number_p[index]
-    result[1] = number_p[index]
+    result[1] = index
 
 # 최빈값
 if maximum_p[0] > maximum_m[0]:
@@ -108,9 +117,7 @@ elif maximum_p[0] == maximum_m[0]:
                 result[2] = maximum_p[2]
 
 # 범위
-if ck_p == 0:
-    while
-result[3] =
+result[3] = -big[0] - small[0]
 
 for i in result:
     print(i)
