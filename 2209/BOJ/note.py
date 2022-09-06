@@ -1,0 +1,1 @@
+print(int(round(-10 /19, 1)))
