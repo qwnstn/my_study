@@ -1,0 +1,51 @@
+from heapq import heappush, heappop
+
+def union(a, b):
+    x, y = get(a),get(b)
+    if x<y:
+        dic[y]=x
+    else:
+        dic[x]=y
+
+
+def get(a):
+    if dic[a] == a:
+        return a
+    else:
+        dic[a] = get(dic[a])
+        return dic[a]
+
+N, M = map(int, input().split())
+cnt = N-1
+
+dic = {i: i for i in range(1, N+1)}
+place = {}
+for i in range(1, N+1):
+    x, y = map(int, input().split())
+    place[i] = (x, y)
+
+rst = 0
+for i in range(M):
+
+    a, b = map(int, input().split())
+    if get(a) != get(b):
+        union(a, b)
+        cnt -= 1
+
+path = []
+for i in range(1, N+1):
+    for j in range(i+1, N+1):
+        dist = ((place[i][0]-place[j][0])**2+(place[i][1]-place[j][1])**2)**(0.5)
+        heappush(path, (dist, i, j))
+
+rst = 0
+while cnt>0:
+    d, a, b = heappop(path)
+    if get(a) != get(b):
+        cnt -= 1
+        union(a,  b)
+        rst += d
+
+
+print("{:.2f}".format(rst))
+
