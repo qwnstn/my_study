@@ -1,1 +1,3 @@
-print(int(round(-10 /19, 1)))
+a = 1
+a *= 0
+print(a)
