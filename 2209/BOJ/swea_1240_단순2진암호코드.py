@@ -26,10 +26,23 @@ for t in range(1, test + 1):
     n, m = map(int, input().split())
 
     for i in range(n):
-        x = [int(input())]
-
+        x = list(map(int, input().split()))
         if x != [0]:
             while x[0] % 10 == 0:
                 x[0] //= 10
             code = '000000' + str(x[0]) + '0'
-    print(code)
+
+    result = 0
+    ckcode = 0
+    for i in range(8):
+        a = code[-8-(7*i):-1-(7*i)]
+        result += key[a]
+        if i % 2 == 0:
+            ckcode += key[a]
+        else:
+            ckcode += key[a] * 3
+
+    if ckcode % 10 == 0:
+        print(f'#{t} {result}')
+    else:
+        print(f'#{t} 0')
