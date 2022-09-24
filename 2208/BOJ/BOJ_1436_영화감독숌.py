@@ -13,7 +13,7 @@
 '''
 num666 = set()
 
-for i in range(10000):
+for i in range(6667):
     num666.add(int(str(i) + '666'))
     num666.add(int('666' + str(i)))
 
@@ -25,6 +25,11 @@ for i in range(10000):
 
     if i >= 1000:
         num666.add(int(str(i // 1000) + '666' + str(i)[-3::]))
+
+'''
+예외
+0000, 000, 00, 
+'''
 
 
 num666 = list(num666)
