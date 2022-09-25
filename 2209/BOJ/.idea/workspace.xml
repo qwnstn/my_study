@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aa66dc2f-f695-48e5-b28f-e74f7ee5e6f5" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../2208/BOJ/BOJ_1436_영화감독숌.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../2208/BOJ/BOJ_1436_영화감독숌.py" afterDir="false" />
-    </list>
+    <list default="true" id="aa66dc2f-f695-48e5-b28f-e74f7ee5e6f5" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,15 +28,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/D_library/Desktop/HWS/study/my_study/2209/BOJ&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "D:/D_library/Desktop/HWS/study/my_study/2209/BOJ",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\D_library\Desktop\HWS\study\my_study\2209\BOJ" />
@@ -87,7 +85,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="BOJ_2004_조합0의개수" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="BOJ_15652_N과M(4)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="2209" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -99,7 +97,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/BOJ_2004_조합0의개수.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/BOJ_15652_N과M(4).py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -174,10 +172,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.BOJ_15651_N과M(3)" />
+        <item itemvalue="Python.BOJ_15652_N과M(4)" />
         <item itemvalue="Python.BOJ_1010_다리놓기" />
         <item itemvalue="Python.note" />
         <item itemvalue="Python.swea_1240_단순2진암호코드" />
-        <item itemvalue="Python.BOJ_2004_조합0의개수" />
       </list>
     </recent_temporary>
   </component>
