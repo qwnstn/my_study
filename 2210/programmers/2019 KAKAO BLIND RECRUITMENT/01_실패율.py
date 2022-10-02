@@ -44,5 +44,8 @@ N	stages	                    result
 
 def solution(N, stages):
     answer = []
-    
+
+    fail = []   # (스테이지, 실패율)
+
+
     return answer
