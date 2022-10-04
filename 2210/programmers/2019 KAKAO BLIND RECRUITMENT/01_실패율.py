@@ -43,9 +43,25 @@ N	stages	                    result
 
 
 def solution(N, stages):
+    stage_dict = {i: 0 for i in range(1, N + 2)}
+    for i in stages:
+        stage_dict[i] += 1
+
+    total = len(stages)
+    fail = [[i] for i in range(1, N + 1)]   # [스테이지, 실패율]
+
+    for i in range(1, N + 1):
+        if total > 0:
+            fail[i - 1].append(stage_dict[i] / total)
+            total -= stage_dict[i]
+        else:
+            fail[i - 1].append(0)
+    fail.sort(key=lambda x: -x[1])
+
     answer = []
-
-    fail = []   # (스테이지, 실패율)
-
+    for i in fail:
+        answer.append(i[0])
 
     return answer
+
+print(solution(5, [2, 1, 2, 6, 2, 4, 3, 3]))
