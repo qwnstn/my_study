@@ -61,10 +61,29 @@ record는 다음과 같은 문자열이 담긴 배열이며, 길이는 1 이상 
 유저 아이디와 닉네임의 길이는 1 이상 10 이하이다.
 채팅방에서 나간 유저가 닉네임을 변경하는 등 잘못 된 입력은 주어지지 않는다.
 '''
-
-
 def solution(record):
     answer = []
+
+    id_dict = dict()    # uid:nickname
+    result = []
+    for i in record:
+        a, b, *c = map(str, i.split())  # 행동, uid, nickname
+        if i[0] == 'E':
+            id_dict[b] = c[0]
+            result.append([a, b])
+        elif i[0] == 'C':
+            id_dict[b] = c[0]
+        else:
+            result.append([a, b])
+
+    for i in result:
+        x = id_dict[i[1]] + '님이 '
+        if i[0][0] == 'E':
+            x += '들어왔습니다.'
+        else:
+            x += '나갔습니다.'
+
+        answer.append(x)
 
     return answer
 
