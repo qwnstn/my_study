@@ -65,7 +65,7 @@ def solution(relation):
                 skip.append(i)
                 total -= 2**i
 
-
+    next
 
 
     return answer
