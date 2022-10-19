@@ -1,6 +1,3 @@
-'''
-for문을 적게 돌리는 방법 찾기
-'''
 import sys
 input = sys.stdin.readline
 

@@ -54,3 +54,6 @@ else:
         result += '1'
 
 print(result)
+'''
+50 9999999999999
+'''
