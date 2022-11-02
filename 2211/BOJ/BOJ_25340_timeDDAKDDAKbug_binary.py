@@ -1,22 +1,21 @@
 import sys
 input = sys.stdin.readline
 
-def check(z):   # 값이 T를 넘는지 확인
-    global result, e, E, D, abcd
-    for i in range(1, n + 1):
-        a = abcd[i][0]
-        b = abcd[i][1]
-        c = abcd[i][2]
-        d = abcd[i][3]
+def check(z):   # z가 T를 넘는지 확인
+    for k in range(1, n + 1):
+        a = abcd[k][0]
+        b = abcd[k][1]
+        c = abcd[k][2]
+        d = abcd[k][3]
 
         if z < c:
-            z = c + d + e[i]
-        elif (z - c) % a <= b - d:
-            z += d + e[i]
-        else:
-            z += -((z - c) % a) + a + d + e[i]
+            z = c
+        elif (z - c) % a > b - d:
+            z += a - ((z - c) % a)
 
-        if z + (D[-1] - D[n]) + (E[-1] - E[n]) > T or z > T:
+        z += d + e[k]
+
+        if z + (D[-1] - D[k]) + (E[-1] - E[k]) > T or z > T:
             return 'high'
 
     if z > T:
@@ -24,7 +23,6 @@ def check(z):   # 값이 T를 넘는지 확인
     elif z < T:
         return 'low'
     else:
-        result = 'YES'
         return 'YES'
 
 
@@ -51,15 +49,14 @@ for _ in range(tc):
     E = []
     ei = 0
     for i in range(n+1):
-        ei += i
+        ei += e[i]
         E.append(ei)
 
     start_time = T - D[-1] - E[-1]  # 이 안에 출발 못하면 불가능
+
     if start_time < 0:
         print('NO')
         continue
-
-    result = 'NO'
 
     s = e[0]
     end = start_time + e[0]
@@ -77,8 +74,12 @@ for _ in range(tc):
     elif check(end) == 'YES':
         print('YES')
         continue
+    elif check(m) == 'YES':
+        print('YES')
+        continue
 
-    while s < end - 1:
+    result = 'NO'
+    while s != end - 1:
         if check(m) == 'high':
             end = m
             m = (s + end) // 2
@@ -86,6 +87,7 @@ for _ in range(tc):
             s = m
             m = (s + end) // 2
         elif check(m) == 'YES':
+            result = 'YES'
             break
 
     print(result)
