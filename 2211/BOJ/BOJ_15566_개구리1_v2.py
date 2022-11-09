@@ -95,8 +95,8 @@ for i in range(m):
     field[b].append((a, t-1))
     field[b][0] += 1
 
-print('frogs', frogs)
-print('field', field)
+# print('frogs', frogs)
+# print('field', field)
 
 '''
 데이터 부분
