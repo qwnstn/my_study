@@ -25,6 +25,7 @@ for d, c in problem:
         result += c
 
     else:
+        # 이미 등록되어있던 번호이면 앞으로 가기
         while ck.get(tmp):
             ck[d] = ck.get(tmp)
             tmp = ck.get(tmp)
