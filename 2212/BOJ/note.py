@@ -1,10 +1,8 @@
-from collections import deque
-asd = [3]
-asd = deque([[[3]]])
+asd = {1:{1,2}, 2:{4,5}, 3:{6,7}}
 
-
-while asd:
-    asd.popleft()
-    print('진행중')
-
-print('끝', asd)
+for k, value in asd.items():
+    tmp = set()
+    for v in value:
+        tmp.add(v * 10)
+    asd[k] = asd[k] | tmp
+print(asd)
