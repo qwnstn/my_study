@@ -1,1 +1,3 @@
-print(max(float('-inf'), float('-inf'))) if max(float('-inf'), float('-inf')) != float('-inf') else print(0)
+asd = {1:1, 2:2, 3:3, 5:1}
+asd.sort()
+print(asd)
