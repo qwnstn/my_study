@@ -1,3 +1,5 @@
-asd = {1:1, 2:2, 3:3, 5:1}
-asd.sort()
-print(asd)
+num = int(input())
+if num >= 0:
+    print(len(bin(num)[2:]))
+else:
+    print(32)
